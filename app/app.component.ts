@@ -2,21 +2,20 @@ import {Component, OnInit} from 'angular2/core';
 import {Hero} from './hero';
 import {HeroDetailComponent} from './hero-detail.component';
 import {HeroService} from './hero.service';
+import {FIREBASE_PROVIDERS, defaultFirebase} from 'angularfire2/angularfire';
 
 @Component({
     selector: 'my-app',
     templateUrl: 'my-app2.html',
     styleUrls: ['app.css'],
     directives: [HeroDetailComponent],
-    providers: [HeroService]
+    providers: [HeroService, defaultFirebase('https://resplendent-heat-1805.firebaseio.com')]
 })
 
 export class AppComponent implements OnInit {
     public title: string = 'Tour of Heroes';
-    public heroes: Hero[]; /* The data type originally specified here was, Hero[]*/
+    public heroes: any; /* The data type originally specified here was, Hero[]*/
     public selectedHero: Hero;
-    public firebaseUrl: string = 'resplendent-heat-1805.firebaseio.com';
-    Firebase = require("firebase");
 
     constructor(private _heroService: HeroService) {
     }

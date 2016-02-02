@@ -1,4 +1,4 @@
-System.register(['angular2/core', './hero-detail.component', './hero.service'], function(exports_1) {
+System.register(['angular2/core', './hero-detail.component', './hero.service', 'angularfire2/angularfire'], function(exports_1) {
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
         if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8,7 +8,7 @@ System.register(['angular2/core', './hero-detail.component', './hero.service'], 
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, hero_detail_component_1, hero_service_1;
+    var core_1, hero_detail_component_1, hero_service_1, angularfire_1;
     var AppComponent;
     return {
         setters:[
@@ -20,15 +20,15 @@ System.register(['angular2/core', './hero-detail.component', './hero.service'], 
             },
             function (hero_service_1_1) {
                 hero_service_1 = hero_service_1_1;
+            },
+            function (angularfire_1_1) {
+                angularfire_1 = angularfire_1_1;
             }],
         execute: function() {
             AppComponent = (function () {
-                //Firebase = require("firebase");
-                //public myFirebaseRef: any = new Firebase("resplendent-heat-1805.firebaseio.com");
                 function AppComponent(_heroService) {
                     this._heroService = _heroService;
                     this.title = 'Tour of Heroes';
-                    this.firebaseUrl = 'resplendent-heat-1805.firebaseio.com';
                 }
                 AppComponent.prototype.getHeroes = function () {
                     var _this = this;
@@ -44,7 +44,7 @@ System.register(['angular2/core', './hero-detail.component', './hero.service'], 
                         templateUrl: 'my-app2.html',
                         styleUrls: ['app.css'],
                         directives: [hero_detail_component_1.HeroDetailComponent],
-                        providers: [hero_service_1.HeroService]
+                        providers: [hero_service_1.HeroService, angularfire_1.defaultFirebase('https://resplendent-heat-1805.firebaseio.com')]
                     }), 
                     __metadata('design:paramtypes', [hero_service_1.HeroService])
                 ], AppComponent);
