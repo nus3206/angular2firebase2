@@ -1,6 +1,6 @@
 import {bootstrap} from 'angular2/platform/browser';
 import {AppComponent} from './app.component';
-//import {FirebaseEventPipe} from './firebasepipe';
+import {FIREBASE_PROVIDERS, defaultFirebase} from 'angularfire2/angularfire';
 
-bootstrap(AppComponent);
-//bootstrap(FirebaseEventPipe);
+bootstrap(AppComponent, [FIREBASE_PROVIDERS, defaultFirebase('https://myUrl.firebaseio.com')]);
+

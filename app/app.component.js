@@ -44,7 +44,7 @@ System.register(['angular2/core', './hero-detail.component', './hero.service', '
                         templateUrl: 'my-app2.html',
                         styleUrls: ['app.css'],
                         directives: [hero_detail_component_1.HeroDetailComponent],
-                        providers: [hero_service_1.HeroService, angularfire_1.defaultFirebase('https://resplendent-heat-1805.firebaseio.com')]
+                        providers: [hero_service_1.HeroService, angularfire_1.defaultFirebase('https://myUrl.firebaseio.com')]
                     }), 
                     __metadata('design:paramtypes', [hero_service_1.HeroService])
                 ], AppComponent);

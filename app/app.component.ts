@@ -9,7 +9,7 @@ import {FIREBASE_PROVIDERS, defaultFirebase} from 'angularfire2/angularfire';
     templateUrl: 'my-app2.html',
     styleUrls: ['app.css'],
     directives: [HeroDetailComponent],
-    providers: [HeroService, defaultFirebase('https://resplendent-heat-1805.firebaseio.com')]
+    providers: [HeroService, defaultFirebase('https://myUrl.firebaseio.com')]
 })
 
 export class AppComponent implements OnInit {
