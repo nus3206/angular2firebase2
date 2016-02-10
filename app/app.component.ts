@@ -1,15 +1,14 @@
-import {Component, OnInit} from 'angular2/core';
+import {Component, Inject, OnInit} from 'angular2/core';
 import {Hero} from './hero';
 import {HeroDetailComponent} from './hero-detail.component';
 import {HeroService} from './hero.service';
-import {FIREBASE_PROVIDERS, defaultFirebase} from 'angularfire2/angularfire';
 
 @Component({
     selector: 'my-app',
     templateUrl: 'my-app2.html',
     styleUrls: ['app.css'],
     directives: [HeroDetailComponent],
-    providers: [HeroService, defaultFirebase('https://myUrl.firebaseio.com')]
+    providers: [HeroService]
 })
 
 export class AppComponent implements OnInit {

@@ -13,6 +13,8 @@ export var HEROES: Hero[] = [
     {"id": 20, "name": "Tornado"}
 ];
 
+/* Update section with firebase code */
+
 /*export class HEROES {
     firebaseUrl: string;
     messagesRef: Firebase;
